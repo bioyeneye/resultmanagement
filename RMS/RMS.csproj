@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C2FFFF5-BCCA-4454-8FCF-851179D57DB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS</RootNamespace>
+    <AssemblyName>RMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DF78CAF2F78887B4E06EB1D2BCDB71820879320C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.7.1.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\lib\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO">
+      <HintPath>..\lib\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=12.1.18.516, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.Reporting.OpenXmlRendering.2.7.2, Version=12.1.18.516, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.HttpClient, Version=12.1.18.516, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=12.1.18.516, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=12.1.18.516, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.Material.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="Controllers\AccountNewController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LevelController.cs" />
+    <Compile Include="Extension\TelerikFormExtension.cs" />
+    <Compile Include="Migrations\201805221635314_New.cs" />
+    <Compile Include="Migrations\201805221635314_New.Designer.cs">
+      <DependentUpon>201805221635314_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ApplicationDbInitializer.cs" />
+    <Compile Include="Model\ApplicationUser.cs" />
+    <Compile Include="Model\CsvData.cs" />
+    <Compile Include="Model\CsvExport.cs" />
+    <Compile Include="Model\ExcelData.cs" />
+    <Compile Include="Model\FileHelper.cs" />
+    <Compile Include="Model\LoginViewModel.cs" />
+    <Compile Include="Model\NameAndIndex.cs" />
+    <Compile Include="Model\RolesConstants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelper\TextHelper.cs" />
+    <Compile Include="View\Admin\Result\Process\AllStudentCourseResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\AllStudentCourseResult.Designer.cs">
+      <DependentUpon>AllStudentCourseResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\PerSemesterNonBulk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\PerSemesterNonBulk.Designer.cs">
+      <DependentUpon>PerSemesterNonBulk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\SingleStudentCourseResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\SingleStudentCourseResult.Designer.cs">
+      <DependentUpon>SingleStudentCourseResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\SingleStudentSemesterResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\Process\SingleStudentSemesterResult.Designer.cs">
+      <DependentUpon>SingleStudentSemesterResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Result\View\AllCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\View\AllCourseStudent.Designer.cs">
+      <DependentUpon>AllCourseStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Result\View\AllSingleCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Result\View\AllSingleCourse.Designer.cs">
+      <DependentUpon>AllSingleCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reporting\ReportingPractise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reporting\ReportingPractise.Designer.cs">
+      <DependentUpon>ReportingPractise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reporting\Report\StudentSemesterResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reporting\Report\StudentSemesterResult.Designer.cs">
+      <DependentUpon>StudentSemesterResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reporting\Report\StudentSemesterResultModel.cs" />
+    <Compile Include="View\SuperAdmin\ClassRep\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\ClassRep\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\ClassRep\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\ClassRep\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\ProcessBulkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Course\ProcessBulkForm.Designer.cs">
+      <DependentUpon>ProcessBulkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Session\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Session\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Session\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Session\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\ProcessBulkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\Student\ProcessBulkForm.Designer.cs">
+      <DependentUpon>ProcessBulkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuperAdmin\SuperAdminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperAdmin\SuperAdminMainForm.Designer.cs">
+      <DependentUpon>SuperAdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AdminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\AdminMainForm.Designer.cs">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WaitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WaitingForm.Designer.cs">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\201805221635314_New.resx">
+      <DependentUpon>201805221635314_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MasterSheet.rdlc" />
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="View\Admin\Result\Process\AllStudentCourseResult.resx">
+      <DependentUpon>AllStudentCourseResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Result\Process\PerSemesterNonBulk.resx">
+      <DependentUpon>PerSemesterNonBulk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Result\Process\SingleStudentCourseResult.resx">
+      <DependentUpon>SingleStudentCourseResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Result\Process\SingleStudentSemesterResult.resx">
+      <DependentUpon>SingleStudentSemesterResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Result\View\AllCourseStudent.resx">
+      <DependentUpon>AllCourseStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\Result\View\AllSingleCourse.resx">
+      <DependentUpon>AllSingleCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reporting\ReportingPractise.resx">
+      <DependentUpon>ReportingPractise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reporting\Report\StudentSemesterResult.resx">
+      <DependentUpon>StudentSemesterResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\ClassRep\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\ClassRep\NewForm.resx">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Course\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Course\NewForm.resx">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Course\ProcessBulkForm.resx">
+      <DependentUpon>ProcessBulkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Session\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Session\NewForm.resx">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Student\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Student\NewForm.resx">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\Student\ProcessBulkForm.resx">
+      <DependentUpon>ProcessBulkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperAdmin\SuperAdminMainForm.resx">
+      <DependentUpon>SuperAdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\AdminMainForm.resx">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WaitingForm.resx">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.ViewModel.ReportGradeDetail.datasource" />
+    <None Include="Properties\DataSources\Model.ViewModel.ReportStudentDetail.datasource" />
+    <None Include="Properties\DataSources\RMS.Report.Model.ReportGradeDetail.datasource" />
+    <None Include="Properties\DataSources\RMS.Report.Model.ReportStudentDetail.datasource" />
+    <None Include="Properties\DataSources\RMS.Report.Model.ReportStudentSemesterCourse.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RMS_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--sirinie -->
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{45e7ee4b-82a7-4b24-a4ae-a533fa0c7a7a}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{936004c0-6f27-46b0-8d64-e6da24742273}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{986dab40-aa75-4aac-b099-de13daeb2b02}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Admin\Result\Edit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Refresh.png" />
+    <None Include="Content\icons8_Add_User_Group_Man_Man_100px_2.png" />
+    <None Include="Content\icons8_Add_User_Group_Man_Man_20px.png" />
+    <None Include="Content\icons8_Access_20px.png" />
+    <None Include="Content\login-2.png" />
+    <None Include="Content\icons8_Access_16px_2.png" />
+    <Content Include="Content\lautech.png" />
+    <Content Include="Content\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
