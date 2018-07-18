@@ -33,19 +33,17 @@
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
-            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnListCourse = new Telerik.WinControls.UI.RadButtonElement();
-            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup3 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnStudent = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab3 = new Telerik.WinControls.UI.RibbonTab();
-            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.radRibbonBarGroup4 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
             this.btnExit = new Telerik.WinControls.UI.RadButtonElement();
+            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -94,8 +92,7 @@
             // 
             this.radRibbonBarGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radButtonElement3,
-            this.radButtonElement4});
+            this.radButtonElement3});
             this.radRibbonBarGroup1.Name = "radRibbonBarGroup1";
             this.radRibbonBarGroup1.Text = "User Management";
             // 
@@ -105,17 +102,11 @@
             this.radButtonElement3.Text = "Class Reps";
             this.radButtonElement3.Click += new System.EventHandler(this.radButtonElement3_Click);
             // 
-            // radButtonElement4
-            // 
-            this.radButtonElement4.Name = "radButtonElement4";
-            this.radButtonElement4.Text = "Roles";
-            // 
             // radRibbonBarGroup2
             // 
             this.radRibbonBarGroup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnListCourse,
-            this.radButtonElement1,
             this.radButtonElement2});
             this.radRibbonBarGroup2.Name = "radRibbonBarGroup2";
             this.radRibbonBarGroup2.Text = "Setups";
@@ -125,11 +116,6 @@
             this.btnListCourse.Name = "btnListCourse";
             this.btnListCourse.Text = "Courses";
             this.btnListCourse.Click += new System.EventHandler(this.btnListCourse_Click);
-            // 
-            // radButtonElement1
-            // 
-            this.radButtonElement1.Name = "radButtonElement1";
-            this.radButtonElement1.Text = "Level";
             // 
             // radButtonElement2
             // 
@@ -223,11 +209,9 @@
         private Telerik.WinControls.UI.RibbonTab ribbonTab3;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup2;
         private Telerik.WinControls.UI.RadButtonElement btnListCourse;
-        private Telerik.WinControls.UI.RadButtonElement radButtonElement1;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement2;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup1;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
-        private Telerik.WinControls.UI.RadButtonElement radButtonElement4;
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup3;
         private Telerik.WinControls.UI.RadButtonElement btnStudent;
