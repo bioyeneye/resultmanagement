@@ -604,3 +604,7 @@ System.Exception: Value cannot be null.
 Parameter name: entity
    at BusinessLogic.Services.ResultService.CreateBulk(List`1 results) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\ResultService.cs:line 113
    at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e)
+
+2018-07-18 02:44:18,764 [1] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.SuperAdmin.Course.ProcessBulkForm.radButton1_Click(Object sender, EventArgs e)

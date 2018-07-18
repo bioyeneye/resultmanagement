@@ -151,7 +151,7 @@ namespace RMS.View.SuperAdmin.Course
                     var courseModel = CourseService.GetCourseByName(courseTemplateDownloadModel.Code);
                     if (string.IsNullOrWhiteSpace(courseTemplateDownloadModel.Code)) continue;
 
-                    if (courseModel == null) continue;
+                    if (courseModel != null) continue;
 
                     var courseModelInDb = CourseService.CanSaveCourse(courseTemplateDownloadModel.Code);
                     if (courseModelInDb != null)
@@ -170,7 +170,7 @@ namespace RMS.View.SuperAdmin.Course
                         LevelId = LevelId
                     };
                     models.Add(model);
-                    courseProcessed += $"{courseModel.Code} {Environment.NewLine}";
+                    courseProcessed += $"{model.Code} {Environment.NewLine}";
                 }
 
                 if (models.Count > 0)
